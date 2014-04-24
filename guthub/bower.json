@@ -1,0 +1,23 @@
+{
+  "name": "guthub",
+  "version": "0.0.0",
+  "authors": [
+    "yoshiya ito <ito_yoshiya@cyberagnet.co.jp>"
+  ],
+  "description": "this is sample application",
+  "main": "index.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+      "jquery": "*",
+      "lodash": "*",
+      "angular": "*",
+      "bootstrap": "*"
+  }
+}
