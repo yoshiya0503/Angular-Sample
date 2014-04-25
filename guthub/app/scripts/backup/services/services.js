@@ -1,10 +1,10 @@
-var service = angular.module('guthub.service', ['ngResource']);
+var services = angular.module('guthub.services', ['ngResource']);
 
-service.factory('Recipe', ['$resource', function($resource) {
+services.factory('Recipe', ['$resource', function($resource) {
     return $resource('/recipes/:id', {id: '@id'});
 }]);
 
-service.factory('MultiRecipeLoader', ['Recipe', '$q', function(Recipe, $q) {
+services.factory('MultiRecipeLoader', ['Recipe', '$q', function(Recipe, $q) {
     return function() {
         var delay = $q.defer();
         Recipe.query(function(recipes) {
@@ -16,7 +16,7 @@ service.factory('MultiRecipeLoader', ['Recipe', '$q', function(Recipe, $q) {
     };
 }]);
 
-service.factory('RecipeLoader', ['Recipe', '$route', '$q', function(Recipe, $route, $q) {
+services.factory('RecipeLoader', ['Recipe', '$route', '$q', function(Recipe, $route, $q) {
     return function() {
         var delay = $q.defer();
         Recipe.get({id: $route.current.params.recipeId}, function(recipes) {
