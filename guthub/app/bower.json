@@ -19,6 +19,7 @@
       "lodash": "*",
       "angular": "*",
       "bootstrap": "*",
-      "angular-resource": "*"
+      "angular-resource": "*",
+      "angular-route" : "*"
   }
 }

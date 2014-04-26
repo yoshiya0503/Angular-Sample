@@ -1,7 +1,7 @@
 'use strict';
 
 var services = angular.module('guthub.services',
-    ['ngResource']);
+    ['ngRoute', 'ngResource']);
 
 services.factory('Recipe', ['$resource',
     function($resource) {

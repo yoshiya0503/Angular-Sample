@@ -1,4 +1,4 @@
-var app = angular.module('guthub', [ 'guthub.directives', 'guthub.services']);
+var app = angular.module('guthub', [ 'ngRoute', 'guthub.directives', 'guthub.services']);
 
 app.controller('ListCtrl', ['$scope', 'recipes', function($scope, recipes) {
     $scope.recipes = recipes;
@@ -54,10 +54,8 @@ app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
     .when('/', {
         resolve: {
-            recipes: {
-                recipes: function(MultiRecipeLoader) {
-                    return MultiRecipeLoader();
-                }
+            recipes: function(MultiRecipeLoader) {
+                return MultiRecipeLoader();
             }
         },
         templateUrl: 'views/list.html'
@@ -74,10 +72,8 @@ app.config(['$routeProvider', function($routeProvider) {
     .when('/view/:recipeId', {
         controller: 'ViewCtrl',
         recolve: {
-            recipe: {
-                recipe: function(RecipeLoader) {
-                    return RecipeLoader();
-                }
+            recipe: function(RecipeLoader) {
+                return RecipeLoader();
             }
         },
         templateUrl: '/views/viewRecipe.html'

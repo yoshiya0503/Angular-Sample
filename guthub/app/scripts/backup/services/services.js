@@ -1,4 +1,4 @@
-var services = angular.module('guthub.services', ['ngResource']);
+var services = angular.module('guthub.services', ['ngRoute', 'ngResource']);
 
 services.factory('Recipe', ['$resource', function($resource) {
     return $resource('/recipes/:id', {id: '@id'});
