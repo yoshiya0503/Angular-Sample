@@ -1,0 +1,24 @@
+{
+  "name": "sample1",
+  "version": "0.0.0",
+  "homepage": "https://github.com/yoshiya0503/Angular-Sample",
+  "description": "this is sample",
+  "authors": [
+    "yoshiya ito"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+      "angular": "*",
+      "angular-route": "*",
+      "jquery": "*",
+      "lodash": "*",
+      "bootstrap": "*"
+  }
+}
