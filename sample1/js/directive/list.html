@@ -1,0 +1,18 @@
+<div ng-Controller="List">
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <td ng-repeat="key in keys">
+                    {{key}}
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="value in values">
+                <td ng-repeat="key in keys">
+                    {{value[key]}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
