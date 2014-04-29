@@ -1,4 +1,4 @@
-<html ng-app>
+<html ng-app="sample1">
     <head>
         <title></title>
         <script src="./bower_components/angular/angular.js"></script>
@@ -10,43 +10,10 @@
         <link href="./css/sample.css" rel="stylesheet">
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-3 sidebar">
-                    <ul class="nav nav-sidebar">
-                        <li class="active">
-                            MongoDB
-                        </li>
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">hoge</a>
-                        </li>
-                        <li>
-                            <a href="#">hoge</a>
-                        </li>
-                    </ul>
-                    <ul class="nav nav-sidebar">
-                        <li class="active">
-                            MongoDB
-                        </li>
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">hoge</a>
-                        </li>
-                        <li>
-                            <a href="#">hoge</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <div class="col-sm-9 col-sm-offset-3 main">
-                    <h1 class="page-header"> Main </h1>
-                </div>
-            </div>
-        </div>
+        <script src="./js/model/collection.js"></script>
+        <script src="./js/controller/collection.js"></script>
+        <script src="./js/directive/nav.js"></script>
+        <h2>This is sample app</h2>
+        <div nav></div>
     </body>
 </html>

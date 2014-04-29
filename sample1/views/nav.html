@@ -1,0 +1,24 @@
+<div nav></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 sidebar">
+            <ul class="nav nav-sidebar">
+                <li>
+                    MongoDB管理
+                </li>
+                <li ng-repeat="collection in collections">
+                    <a ng-href="#/{{collection.name}}">{{collection.name}}</a>
+                </li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li>
+                    管理
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 main">
+            <h1 class="page-header"> Main </h1>
+        </div>
+    </div>
+</div>
+
