@@ -13,7 +13,53 @@
         <script src="./js/model/collection.js"></script>
         <script src="./js/controller/collection.js"></script>
         <script src="./js/directive/nav.js"></script>
+
         <h2>This is sample app</h2>
-        <div nav></div>
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 sidebar">
+                    <ul class="nav nav-sidebar">
+                        <li class="active">
+                            MongoDB管理
+                        </li>
+                        <div nav></div>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li class="active">
+                            ウィジェット
+                        </li>
+                        <li>
+                            <a href="#">hoge</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-sm-9 col-sm-offset-3 main">
+                    <h1 class="page-header"> Main </h1>
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <td>hoge</td>
+                                <td>hoge</td>
+                                <td>hoge</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>りんご</td>
+                                <td>甘酸っぱい</td>
+                                <td>おおむね赤</td>
+                            </tr>
+                            <tr>
+                                <td>なつみかん</td>
+                                <td>かなり酸っぱいと思う</td>
+                                <td>たいてい黄色</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

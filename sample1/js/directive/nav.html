@@ -1,34 +1,5 @@
 <div ng-Controller="Collections">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-3 sidebar">
-                <ul class="nav nav-sidebar">
-                    <li class="active">
-                        MongoDB管理
-                    </li>
-                    <li ng-repeat="collection in collections">
-                        {{collection}}
-                    </li>
-                </ul>
-                <ul class="nav nav-sidebar">
-                    <li class="active">
-                        MongoDB管理
-                    </li>
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">hoge</a>
-                    </li>
-                    <li>
-                        <a href="#">hoge</a>
-                    </li>
-                </ul>
-
-            </div>
-            <div class="col-sm-9 col-sm-offset-3 main">
-                <h1 class="page-header"> Main </h1>
-            </div>
-        </div>
-    </div>
+    <li ng-repeat="collection in collections">
+        {{collection}}
+    </li>
 </div>
