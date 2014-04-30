@@ -19,6 +19,13 @@
         <script src="./js/directive/list.js"></script>
         <script src="./js/directive/nav.js"></script>
 
+        <script type="text/javascript">
+            angular.module('sample1.model', ['sample1.model.collections', 'sample1.model.list'])
+            angular.module('sample1.controller', ['sample1.controller.collections', 'sample1.controller.list'])
+            angular.module('sample1.directive', ['sample1.directive.nav', 'sample1.directive.list'])
+            angular.module('sample1', ['sample1.directive', 'sample1.controller', 'sample1.model']);
+        </script>
+
     </head>
     <body>
         <h2>This is sample app</h2>
