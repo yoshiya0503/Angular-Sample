@@ -1,4 +1,4 @@
-angular.module('sample1', [
+angular.module('sample1.directive.nav', [
     "sample1.controller.collections"
 ]).directive('nav', function() {
     return {
