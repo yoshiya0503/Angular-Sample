@@ -12,18 +12,38 @@
         <!-- MODEL -->
         <script src="./js/model/collection.js"></script>
         <script src="./js/model/list.js"></script>
+        <script src="./js/model/modal.js"></script>
         <!-- CONTROLLER -->
         <script src="./js/controller/collection.js"></script>
         <script src="./js/controller/list.js"></script>
+        <script src="./js/controller/modal.js"></script>
         <!-- DIRECTIVE -->
         <script src="./js/directive/list.js"></script>
         <script src="./js/directive/nav.js"></script>
+        <script src="./js/directive/modal.js"></script>
 
+        <!-- INJECTION -->
         <script type="text/javascript">
-            angular.module('sample1.model', ['sample1.model.collections', 'sample1.model.list'])
-            angular.module('sample1.controller', ['sample1.controller.collections', 'sample1.controller.list'])
-            angular.module('sample1.directive', ['sample1.directive.nav', 'sample1.directive.list'])
-            angular.module('sample1', ['sample1.directive', 'sample1.controller', 'sample1.model']);
+            angular.module('sample1.model', [
+                'sample1.model.collections',
+                'sample1.model.list',
+                'sample1.model.modal'
+            ]);
+            angular.module('sample1.controller', [
+                'sample1.controller.collections',
+                'sample1.controller.list',
+                'sample1.controller.modal',
+            ]);
+            angular.module('sample1.directive', [
+                'sample1.directive.nav',
+                'sample1.directive.list',
+                'sample1.directive.modal'
+            ]);
+            angular.module('sample1', [
+                'sample1.directive',
+                'sample1.controller',
+                'sample1.model'
+            ]);
         </script>
 
     </head>
@@ -51,6 +71,11 @@
                 </div>
                 <div class="col-sm-9 col-sm-offset-3 main">
                     <h1 class="page-header"> Main </h1>
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                        Launch demo modal
+                    </button>
+                    <div modal></div>
                     <div list></div>
                 </div>
             </div>
