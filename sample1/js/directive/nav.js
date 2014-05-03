@@ -3,7 +3,6 @@ angular.module('sample1.directive.nav', [
 ]).directive('nav', function() {
     return {
         restrict: 'EA',
-        replace: false,
         transclude: true,
         templateUrl: 'js/directive/nav.html'
     };

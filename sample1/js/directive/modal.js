@@ -3,7 +3,6 @@ angular.module('sample1.directive.modal', [
 ]).directive('modal', function() {
     return {
         restrict: 'EA',
-        repalace: true,
         transclude: true,
         templateUrl: 'js/directive/modal.html'
     };
