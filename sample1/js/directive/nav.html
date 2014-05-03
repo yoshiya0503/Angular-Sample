@@ -1,5 +1,7 @@
-<div ng-Controller="Collections">
-    <li ng-repeat="collection in collections">
-        {{collection}}
-    </li>
-</div>
+<li ng-repeat="collection in collections">
+    <div ng-click="getCollection(collection)">
+        <a href="/#/">
+            {{collection}}
+        </a>
+    </div>
+</li>

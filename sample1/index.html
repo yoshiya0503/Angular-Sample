@@ -50,28 +50,34 @@
     <body>
         <h2>This is sample app</h2>
         
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-3 sidebar">
-                    <ul class="nav nav-sidebar">
-                        <li class="active">
-                            MongoDB管理
-                        </li>
-                        <div nav></div>
-                    </ul>
-                    <ul class="nav nav-sidebar">
-                        <li class="active">
-                            ウィジェット
-                        </li>
-                        <li>
-                            <a href="#">hoge</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-9 col-sm-offset-3 main">
-                    <h1 class="page-header"> Main </h1>
-                    <div list></div>
-                    <div modal></div>
+        <div ng-Controller="Collections">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-3 sidebar">
+                        <ul class="nav nav-sidebar">
+                            <li class="active">
+                                MongoDB管理
+                            </li>
+                            <div nav></div>
+                        </ul>
+                        <ul class="nav nav-sidebar">
+                            <li class="active">
+                                ウィジェット
+                            </li>
+                            <li>
+                                <a href="#">hoge</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div ng-Controller="List">
+                        <div class="col-sm-9 col-sm-offset-3 main">
+                            <h1 class="page-header"> Main </h1>
+                            <div list></div>
+                            <div ng-Controller="Modal">
+                                <div modal></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
