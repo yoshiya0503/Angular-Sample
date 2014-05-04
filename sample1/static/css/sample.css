@@ -31,3 +31,10 @@
     color: #fff;
     background-color: #428bca;
 }
+
+.bgimg {
+    background-image: url("../img/Vim-Advent-Calendar-2012.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    overflow:hidden;
+}
