@@ -22,8 +22,15 @@ exports.getCollections = function(callback) {
         if (err) {
             return callback(err);
         }
+
+        //get collections without system.indexes
+        var collections = _.chain(list).map(function(col) {
+            var systemName = col.name;
+            return _.last(systemName.split('.'));
+        }).pull('indexes').value();
+
         callback(null, {
-            names: _.pluck(list, 'name')
+            names: collections
         });
     });
 };
