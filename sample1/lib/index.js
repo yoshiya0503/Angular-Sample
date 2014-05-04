@@ -48,6 +48,23 @@ exports.list = function(col, callback) {
 };
 
 /**
+ * get document
+ * @method get
+ * @param {String} _id
+ * @param {Function} callback
+ */
+exports.get = function(col, _id, callback) {
+
+    var collection = db.collection(col);
+    collection.findOne({_id: _id}, function(err, result) {
+        if (err) {
+            return callback(err);
+        }
+        callback(null, result);
+    });
+};
+
+/**
  * upsert document
  * @method upsert
  * @param {String} col

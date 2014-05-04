@@ -11,30 +11,74 @@ var _ = require('lodash');
 
 /**
  * GET method
+ * @method collections
+ * @param {Object} req
+ * @param {Object} res
+ * @param {Function} next
+ */
+exports.collections = function(req, res, next) {
+    mongo.getCollections(function(err, result) {
+        if (err) {
+            return res.send(err);
+        }
+        res.send(result);
+    });
+};
+
+/**
+ * GET method
+ * @method list
+ * @param {Object} req
+ * @param {Object} res
+ * @param {Function} next
+ */
+exports.list = function(req, res, next) {
+    var col = req.query.col || 'Boss';
+    mongo.list(col, function(err, result) {
+        if (err) {
+            return res.send(err);
+        }
+        res.send(result);
+    });
+};
+
+/**
+ * GET method
  * @method get
  * @param {Object} req
  * @param {Object} res
  * @param {Function} next
  */
 exports.get = function(req, res, next) {
+    var _id = req.query._id || null; 
+    var col = req.query.col || null;
+    mongo.get(col, _id, function(err, result) {
+        if (err) {
+            return res.send(err);
+        }
+        res.send(result);
+    });
 };
 
 /**
  * POST method
- * @method get
+ * @method post
  * @param {Object} req
  * @param {Object} res
  * @param {Function} next
  */
 exports.post = function(req, res, next) {
-};
+    var col = req.body.col || null; 
+    var doc = req.body.doc || null;
+    var query = {
+        _id : doc && doc._id || null
+    };
+    var update = _.omit(doc, '_id');
 
-/**
- * DELETE method
- * @method delete
- * @param {Object} req
- * @param {Object} res
- * @param {Function} next
- */
-exports.delete = function(req, res, next) {
+    mongo.upsert(col, query, update, function(err, reuslt) {
+        if (err) {
+            return res.send(err);
+        }
+        res.send(reuslt);
+    });
 };
