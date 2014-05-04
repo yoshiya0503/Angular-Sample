@@ -50,7 +50,9 @@ exports.list = function(req, res, next) {
  * @param {Function} next
  */
 exports.get = function(req, res, next) {
-    var _id = req.query._id || null; 
+
+    //TODO _id type should be string
+    var _id = Number(req.query._id) || null; 
     var col = req.query.col || null;
     mongo.get(col, _id, function(err, result) {
         if (err) {
